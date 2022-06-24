@@ -5,13 +5,114 @@
 }
 html, body{
     font-family: 'Jost', sans-serif;
+    line-height: 1.5;
+    color: #404040;
+    font-size: 1rem;
 }
-@media screen and (max-width: 1024px){
+
+/* header */
+header{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top:0;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+    border-bottom:2px solid rgba(231, 231, 231, 0.18);
+    background-color:#767373;
+}
+header .container{
+    max-width: 1250px;
+}
+header .navbar-brand{
+    font-size: 2rem;
+    color: #fff;
+}
+header .navbar .navbar-brand{
+    color: #fff;
+}
+header .navbar .navbar-brand .fa-align-right{
+    color: #009f4d;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+header .navbar .navbar-brand .logo{
+    text-transform: none;
+    display: block;
+    font-size: 14px;
+    padding-left: 46px;
+    font-weight: 600;
+    opacity: .9;
+}
+#navbarCorp .nav-item{
+    margin: 0 10px;
+}
+#navbarCorp .nav-link i{
+    font-size: 12px;
+    transform: translateY(-2px);
+}
+#navbarCorp .nav-item .nav-link{
+    color: #fff;
+    transition: all .5s ease;
+    font-size: 1rem;
+    padding: 14px 0 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: .8;
+}
+#navbarCorp .active .nav-link{
+    opacity: 1;
+}
+#navbarCorp .header-search{
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    border-radius: 100%;
+    outline: 0;
+    background-color: #009f4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px  ;
+    color: #fff;
+}
+#navbarCorp .header-darkLight{
+    font-size: 20px;
+    padding-right: 26px;
+    color: #fff;
+}
+#navbarCorp .dropdown-menu{
+    width: 180px;
+    border-radius: 10px;
+    transform: translateX(-60px);
+    position: absolute;
+    border: none;
+
+}
+#navbarCorp .dropdown-menu a{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #3f3a64;
+}
   
+#navbarCorp .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    border-width: 12px 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    right: 80px;
+    top: -24px;
+  }
+
+@media screen and (max-width: 1024px){
+
 }
 
 @media screen and (max-width: 768px){
-    
+
 }
 
 @media screen and (max-width: 480px){
