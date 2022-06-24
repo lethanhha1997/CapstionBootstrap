@@ -112,9 +112,17 @@ header .navbar .navbar-brand .logo{
 }
 
 @media screen and (max-width: 768px){
-
+    header .navbar{
+        margin-top: 8px;
+        margin-left: 14px;
+    }
+    header .navbar-toggler{
+        border: none;
+    }
 }
 
 @media screen and (max-width: 480px){
-    
+    header .navbar{
+        padding: 30px 0px;
+    }
 }
