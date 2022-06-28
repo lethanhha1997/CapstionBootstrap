@@ -50,7 +50,7 @@ body {
 }
 
 .nav-fixed .navbar .navbar-brand {
-  color: black;
+  color: #3f3a64
 }
 
 .nav-fixed #navbarCorp .nav-item .nav-link {
@@ -131,6 +131,7 @@ header .navbar .navbar-brand .logo {
   align-items: center;
   justify-content: center;
   color: #fff;
+  cursor: pointer;
 }
 
 #navbarCorp .header-darkLight {
@@ -171,11 +172,25 @@ header .navbar .navbar-brand .logo {
   top: -24px;
 }
 
+.controlCrop .btn-material{
+  line-height: 45px;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  background: var(--primary-color);
+  outline: 0;
+  transform-origin: 50%;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* carousel */
 .carousel{
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-bottom: 100px;
   position: relative;
 }
 .carousel .container-fluid{
@@ -318,7 +333,7 @@ header .navbar .navbar-brand .logo {
 /* gợn sóng */
 .wave{
   position: absolute;
-  bottom: 0 ;
+  bottom: 0;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -328,6 +343,58 @@ header .navbar .navbar-brand .logo {
   vertical-align: bottom;
   overflow:hidden ;
 }
+
+/* about */
+.about{
+  /* margin-top: 50px; */
+}
+.title-s{
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 26px;
+  display: block;
+  color: #7e7d7d;
+}
+.title-b{
+  font-size: 34px;
+  line-height: 45px;
+  font-weight: 600;
+  color: #3f3a64
+}
+.title-p{
+  color: #949494;
+}
+.img-about{
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.about-list{
+  list-style: none;
+}
+.about-link{
+  margin-bottom: 10px;
+}
+.about-link span{
+  text-align: center;
+  margin-right: 14px;
+}
+.about-link a{
+  font-size: 19px;
+  color: #3f3a64;
+  font-weight: 500;
+}
+.about-link i{
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  background-color: #009f4d;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 20px;
+}
+
 
 /*Gallery section  */
 .gallery__content a.zoom {
@@ -489,7 +556,6 @@ header .navbar .navbar-brand .logo {
   background-image: linear-gradient(-224deg, #0d8abc, #61fded);
 }
 
-
 /* Light theme */
 #darkBody {
   background-color: white;
@@ -514,8 +580,6 @@ header .navbar .navbar-brand .logo {
   color: #151421;
   background-color: white;
 }
-
-
 /* Dark Theme*/
 .dark#darkBody {
   background-color: #151421;
@@ -527,7 +591,6 @@ header .navbar .navbar-brand .logo {
 .dark #site-header .navbar-brand,.dark #site-header .navbar-nav .nav-link{
   color: white;
 }
-
 
 .dark #switchButton {
   color: #151421;
@@ -557,6 +620,16 @@ header .navbar .navbar-brand .logo {
 .dark .wave{
   fill: #151421;
 }
+.dark .about{
+  background-color: #151421;
+}
+.dark .title-b{
+  color: white;
+}
+.dark .about-link a{
+  color: white;
+}
+
 
 @media screen and (max-width: 1200px) {
   #carouselCorp .carousel-item{
@@ -571,7 +644,6 @@ header .navbar .navbar-brand .logo {
     bottom: 0;
     left: 0;
     z-index: 1;
-    border-bottom: 1px solid #404040;
   }
 }
 
@@ -587,16 +659,12 @@ header .navbar .navbar-brand .logo {
     bottom: 0;
     left:0;
     z-index: 10;
-    border-bottom: 1px solid #404040;
   }
 }
 @media screen and (max-width: 992px) {
   .carousel{
     max-height: 800px;
   }
-  /* #carouselCorp .carousel-item{
-    height: 700px;
-  } */
   #carouselCorp .carousel-caption{
     left: 4%;
     top: 20%;
@@ -606,7 +674,6 @@ header .navbar .navbar-brand .logo {
     bottom: 0;
     right: 0;
     z-index: 1;
-    border-bottom: 1px solid #404040;
   }
 }
 
@@ -616,6 +683,13 @@ header .navbar .navbar-brand .logo {
   header .navbar {
     margin-top: 8px;
     margin-left: 14px;
+  }
+  .btn{
+    display: none;
+  }
+
+  .navbar{
+    justify-content: space-between;
   }
   header .navbar-toggler {
     border: none;
@@ -628,6 +702,10 @@ header .navbar .navbar-brand .logo {
   #site-header .navbar-nav{
     text-align: center;
     width: 100%;
+  }
+  #navbarCorp .nav-item .nav-link{
+    background-color: #151421;
+    
   }
   .nav-fixed #navbarCorp .nav-item .nav-link{
     background-color: #fff;
@@ -658,7 +736,6 @@ header .navbar .navbar-brand .logo {
     bottom: 0;
     left: 0;
     z-index: 1;
-    border-bottom: 1px solid #404040;
   }
 
 }
@@ -666,6 +743,12 @@ header .navbar .navbar-brand .logo {
 @media screen and (max-width: 576px) {
   header .navbar {
     padding: 30px 0px;
+  }
+  #navbarCorp .nav-item .nav-link{
+    background-color: #151421;
+  }
+  .btn{
+    display: none;
   }
   .carousel{
     min-height: 600px;
@@ -684,7 +767,6 @@ header .navbar .navbar-brand .logo {
     bottom: 0 ;
     left: 0;
     z-index: 1;
-    border-bottom: 1px solid #404040;
   }
 }
 @media screen and (max-width: 240px){
