@@ -10,13 +10,34 @@ body {
   line-height: 1.5;
   color: #404040;
   font-size: 1rem;
-  width: 100%;
+  /* width: 100%; */
+ 
 }
 .container-fluid{
   padding: 0;
 }
+.every .container, .always .container, .about .container, .gallery .container{
+  max-width: 1230px;
+}
 
-/* header */
+
+.btn-secondary {
+  padding: 12px 46px;
+  background-color: #00a63f;
+  border-color: #00a63f;
+  line-height: 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-secondary:hover{
+  color: #fff;
+    background-color: #008030;
+    border-color: #00732c
+}
+
+/* Header */
 .fixed-top {
   position: fixed;
   width: 100%;
@@ -94,6 +115,14 @@ header .navbar .navbar-brand .logo {
   font-weight: 600;
   opacity: .9;
 }
+header .navbar-toggler {
+  border: none;
+  background-color: #009f4d;
+}
+#site-header .navbar-toggler span{
+  background-color: #009f4d;
+  color: white;
+}
 
 #navbarCorp .nav-item {
   margin: 0 10px;
@@ -111,7 +140,7 @@ header .navbar .navbar-brand .logo {
   padding: 14px 0 10px;
   text-transform: uppercase;
   font-weight: 600;
-  opacity: .8;
+
 }
 
 #navbarCorp .active .nav-link {
@@ -144,8 +173,6 @@ header .navbar .navbar-brand .logo {
   border-radius: 10px;
   transform: translateX(-60px);
   position: absolute;
-  border: none;
-
 }
 
 #navbarCorp .dropdown-menu a {
@@ -184,7 +211,7 @@ header .navbar .navbar-brand .logo {
   transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* carousel */
+/* Carousel */
 .carouselC{
   width: 100%;
   height: 100%;
@@ -259,7 +286,6 @@ header .navbar .navbar-brand .logo {
   width:100%;
   text-align: left;
   text-overflow: clip;
-  /* margin: 0 auto; */
 }
 
 #carouselCorp .carousel-caption h1 {
@@ -277,24 +303,6 @@ header .navbar .navbar-brand .logo {
   opacity: .9;
   word-break: break-word;
 
-}
-
-#carouselCorp .carousel-caption .btn {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 600;
-  transition: 0.3s ease-in;
-  border-radius: 8px;
-  margin-left: -12px;
-  margin-top: 10px;
-}
-
-#carouselCorp .carousel-caption .btn-secondary {
-  padding: 12px 50px;
-  background-color: #00a63f;
-  border-color: #00a63f;
-  color: #fff;
-  border-radius: 8px;
 }
 
 #carouselCorp .btn-bottom {
@@ -315,9 +323,14 @@ header .navbar .navbar-brand .logo {
   height: 50px;
   border-radius: 100%;
   font-size: 20px;
-  /* border: 2px solid; */
   z-index: 5;
   box-shadow: 0 0 15px rgb(0 0 0 / 30%)
+}
+.carousel-item .carousel-caption .btn-secondary:hover{
+  color: #fff;
+  background-color: #008030;
+  border-color: #00732c;
+  cursor: pointer;
 }
 
 #carouselCorp i {
@@ -328,7 +341,6 @@ header .navbar .navbar-brand .logo {
   align-items: center;
   justify-content: center;
 }
-/* gợn sóng */
 .wave{
   position: absolute;
   bottom: 0;
@@ -342,7 +354,8 @@ header .navbar .navbar-brand .logo {
   overflow:hidden ;
 }
 
-/* about */
+/* About */
+
 .title-s{
   font-size: 14px;
   font-weight: 600;
@@ -391,16 +404,8 @@ header .navbar .navbar-brand .logo {
   line-height: 20px;
 }
 
-/* every */
-.every .btn-secondary {
-  padding: 12px 46px;
-  background-color: #00a63f;
-  border-color: #00a63f;
-  line-height: 18px;
-  border-radius: 8px;
-  font-weight: 600;
-  color: #fff;
-}
+/* Every */
+
 .every-grid{
   display: grid;
   grid-template-columns: 1fr 1fr ;
@@ -430,6 +435,7 @@ header .navbar .navbar-brand .logo {
 
 }
 /* Always */
+
 .always h3{
   text-align: center;
 }
@@ -485,7 +491,11 @@ header .navbar .navbar-brand .logo {
   opacity: .8;
   line-height: 27px;
 }
-
+.always-center{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 
 /*Gallery section  */
@@ -656,7 +666,6 @@ header .navbar .navbar-brand .logo {
 #switchButton {
   font-size: 24px;
   color: white;
-  transform: rotate(-20deg);
 }
 
 #switchButton .fa-sun {
@@ -742,11 +751,17 @@ header .navbar .navbar-brand .logo {
   color: #fff;
 }
 
-.dark .gallery{
-  background-color: #0d8abc;
+@media  screen and (max-width: 1280px) {
+  .container{
+    max-width: 1200px;
+  }
+  
 }
-
 @media screen and (max-width: 1200px) {
+  .container{
+    max-width: 1140px;
+
+  }
   #carouselCorp .carousel-item{
     max-height: 800px;
   }
@@ -754,27 +769,17 @@ header .navbar .navbar-brand .logo {
     left: 2%;
     top:26%;
   }
-  .wave {
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-  }
 }
 
 @media screen and (max-width: 1024px) {
+
   .carousel{
     max-height: 800px;
   }
   #carouselCorp .carousel-caption{
     left: 4%;
   }
-  .wave {
-    width: 100%;
-    bottom: 0;
-    left:0;
-    z-index: 10;
-  }
+
 }
 @media screen and (max-width: 992px) {
   .carousel{
@@ -784,23 +789,38 @@ header .navbar .navbar-brand .logo {
     left: 4%;
     top: 20%;
   }
-  .wave {
-    width: 100%;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
+  #navbarCorp .nav-item .nav-link{
+    text-align: center;
+    background-color: #151421;  
   }
-  /* .always-center{
-    justify-content: center;
+  .nav-fixed #navbarCorp .nav-item .nav-link{
+    background-color: #fff;
+    color: #404040;
   }
-  .always .col-md-6{
-    flex: 0 0 50%;
-    max-width: 50%;
+  .header-search{
+    position: absolute;
+    top: 20px;
+    right: 120px;
   }
-   */
+  #switchButton{
+    position: absolute;
+    top: 26px;
+    right:70px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .header-search{
+    position: absolute;
+    top: 20px;
+    right: 120px;
+  }
+  #switchButton{
+    position: absolute;
+    top: 26px;
+    right:70px;
+  }
+
   header .navbar {
     margin-top: 8px;
     margin-left: 14px;
@@ -808,14 +828,7 @@ header .navbar .navbar-brand .logo {
   .navbar{
     justify-content: space-between;
   }
-  header .navbar-toggler {
-    border: none;
-    background-color: #009f4d;
-  }
-  #site-header .navbar-toggler span{
-    background-color: #009f4d;
-    color: white;
-  }
+ 
   #site-header .navbar-nav{
     text-align: center;
     width: 100%;
@@ -847,25 +860,16 @@ header .navbar .navbar-brand .logo {
   .btn-bottom{
     z-index: 12;
   }
-  .wave {
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-  }
-  .always-center{
-    justify-content: center;
-  }
-  .always .col-md-6{
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
 }
 
 @media screen and (max-width: 576px) {
+
   header .navbar {
     padding: 30px 0px;
+  }
+  .nav-fixed #navbarCorp .nav-item .nav-link{
+    background-color: #fff;
+    color: #404040;
   }
   #navbarCorp .nav-item .nav-link{
     background-color: #151421;
@@ -881,19 +885,6 @@ header .navbar .navbar-brand .logo {
   }
   .btn-bottom{
     z-index: 12;
-  }
-  .wave {
-    width: 100%;
-    bottom: 0 ;
-    left: 0;
-    z-index: 1;
-  }
-  .always-center{
-    justify-content: center;
-  }
-  .always .col-sm-12{
-    flex: 0 0 100%;
-    max-width: 100%;
   }
 
 }
