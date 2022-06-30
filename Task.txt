@@ -1,0 +1,14 @@
+Nhóm 13 : Chọn bài thứ 4 Corp Vision
+
+Dev 1 (Thanh Hà): Tạo File, dowload ảnh, hoàn chỉnh khung bài đẩy lên git , Làm Header 
+Dev 2 (Duy Anh) : Clone git về làm GALLERY.
+Dev 1 (Thanh Hà): Làm Carousel + Rps + dark more
+Dev 2 (Duy Anh) : Làm Success + Rps + dark more
+Dev 1 (Thanh Hà): Làm About + Rps + dark more
+Dev 2 (Duy Anh) : Làm Feed Back + Rps + dark more
+Dev 1 (Thanh Hà): Làm Every + Rps + dark more
+Dev 2 (Duy Anh) : Làm News + Rps + dark more
+Dev 1 (Thanh Hà): Làm Always + Rps + dark more
+Dev 2 (Duy Anh) : Làm Find + Rps + dark more
+Dev 1 (Thanh Hà): Làm Back To Top + Rps + dark more
+Dev 2 (Duy Anh) : Làm Footer + Rps + dark more
