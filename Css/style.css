@@ -247,7 +247,22 @@ header .navbar-toggler {
   transform-origin: 50%;
   transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+#close .navbar-toggler-icon {
+  display: block;
+}
+#close .close {
+  display: none;
+}
+.open #close .navbar-toggler-icon{
+    display: none;
+}
+.open #close .close{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+}
 /* Carousel */
 .carouselC{
   width: 100%;
@@ -904,22 +919,7 @@ header .navbar-toggler {
     z-index: 12;
   }
   /* closeButton */
-  #close .navbar-toggler-icon {
-  display: block;
-  }
-  #close .close {
-  display: none;
-  }
-  .open #close .navbar-toggler-icon{
-    display: none;
-  }
-  .open #close .close{
-    display: block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    color: white;
-  }
+
 
 
 
