@@ -4,12 +4,10 @@ document.getElementById("switchButton").onclick = function () {
     document.getElementById("darkBody").classList.toggle("dark");
 };
 
-// switch button close toogle
+// switch button close and navbar-toggler-icon
 document.getElementById("close").onclick = function () {
     document.getElementById("darkBody").classList.toggle("open");
 };
-
-
 
 // Header scroll
 $(window).on("scroll", function () {
