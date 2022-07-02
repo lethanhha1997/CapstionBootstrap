@@ -228,7 +228,6 @@ header .navbar-toggler {
 }
 
 #navbarCorp .dropdown-menu::before {
-
   content: "";
   position: absolute;
   border-width: 12px 10px;
@@ -281,6 +280,7 @@ header .navbar-toggler {
 #carouselCorp .carousel-item{
   width: 100%;
   min-height:110vh ;
+  position: relative;
 }
 
 #carouselCorp .carousel-item>img {
@@ -327,12 +327,12 @@ header .navbar-toggler {
 }
 
 #carouselCorp .carousel-caption {
-  position: absolute;
   top: 25%;
   left:11%;
   width:100%;
   text-align: left;
   text-overflow: clip;
+  z-index: 12;
 }
 
 #carouselCorp .carousel-caption h1 {
@@ -370,16 +370,10 @@ header .navbar-toggler {
   height: 50px;
   border-radius: 100%;
   font-size: 20px;
-  z-index: 5;
+  z-index: 10;
   box-shadow: 0 0 15px rgb(0 0 0 / 30%)
 }
-.carousel-item .carousel-caption .btn-secondary:hover{
-  color:  var(--bg-color);
-  background-color: #008030;
-  border-color: #00732c;
-  cursor: pointer;
 
-}
 
 #carouselCorp i {
   width: 50px;
@@ -789,6 +783,7 @@ header .navbar-toggler {
   position: fixed;
   right: 20px;
   bottom:20px;
+  z-index: 100;
   color: #fff;
   transition: ease-out .3s;
   visibility: hidden;
@@ -849,6 +844,7 @@ header .navbar-toggler {
   }
   #navbarCorp .nav-item .nav-link{
     text-align: center;
+    background-color: var(--bg-dark); 
   }
   .nav-fixed #navbarCorp .nav-item .nav-link{
     background-color:  var(--bg-color);
@@ -894,17 +890,9 @@ header .navbar-toggler {
   #navbarCorp .dropdown-menu::before{
     display: none;
   }
- 
   #site-header .navbar-nav{
     text-align: center;
     width: 100%;
-  }
-  #navbarCorp .nav-item .nav-link{
-    background-color: var(--bg-dark);  
-  }
-  .nav-fixed #navbarCorp .nav-item .nav-link{
-    background-color:  var(--bg-color);
-    color: #404040;
   }
   .carousel{
     min-height: 600px;
@@ -917,7 +905,6 @@ header .navbar-toggler {
   }
   #carouselCorp .carousel-caption h1 {
     font-size: 35px;
-
   }
   #carouselCorp .carousel-caption p {
     font-size: 16px;
@@ -926,11 +913,6 @@ header .navbar-toggler {
   .btn-bottom{
     z-index: 12;
   }
-  /* closeButton */
-
-
-
-
 }
 
 @media screen and (max-width: 576px) {
@@ -957,7 +939,6 @@ header .navbar-toggler {
   .btn-bottom{
     z-index: 12;
   }
-
 }
 @media screen and (max-width: 240px){
   .btn-bottom{
