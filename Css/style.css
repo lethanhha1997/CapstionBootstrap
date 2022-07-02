@@ -52,12 +52,15 @@ body {
   font-weight: 600;
   color: var(--bg-color);
   cursor: pointer;
+  z-index: 10;
 }
 .btn-secondary:hover{
   color: var(--bg-color);
   background-color: #008030;
   border-color: #00732c;
   transition: .6s ease-in;
+  text-decoration: none;
+  
 }
 
 .title-s{
@@ -277,7 +280,7 @@ header .navbar-toggler {
 
 #carouselCorp .carousel-item{
   width: 100%;
-  min-height:100vh ;
+  min-height:110vh ;
 }
 
 #carouselCorp .carousel-item>img {
@@ -325,7 +328,7 @@ header .navbar-toggler {
 
 #carouselCorp .carousel-caption {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left:11%;
   width:100%;
   text-align: left;
@@ -334,7 +337,7 @@ header .navbar-toggler {
 
 #carouselCorp .carousel-caption h1 {
   line-height: 1.1;
-  font-size: 65px;
+  font-size: 60px;
   margin-bottom: 16px;
   font-weight: 600;
 
@@ -375,6 +378,7 @@ header .navbar-toggler {
   background-color: #008030;
   border-color: #00732c;
   cursor: pointer;
+
 }
 
 #carouselCorp i {
@@ -393,6 +397,7 @@ header .navbar-toggler {
   z-index: 1;
   fill:  var(--bg-color);
 }
+
 .svg{
   vertical-align: bottom;
   overflow:hidden ;
@@ -805,7 +810,7 @@ header .navbar-toggler {
   .container{
     max-width: 1200px;
   }
-  
+   
 }
 @media screen and (max-width: 1200px) {
   .container{
@@ -813,18 +818,21 @@ header .navbar-toggler {
 
   }
   #carouselCorp .carousel-item{
-    max-height: 800px;
+    min-height: 800px;
   }
   #carouselCorp .carousel-caption{
     left: 2%;
     top:26%;
+  }
+  .carousel-item .carousel-caption .btn-secondary{
+    z-index: 13;
   }
 }
 
 @media screen and (max-width: 1024px) {
 
   .carousel{
-    max-height: 800px;
+    min-height: 800px;
   }
   #carouselCorp .carousel-caption{
     left: 4%;
@@ -833,7 +841,7 @@ header .navbar-toggler {
 }
 @media screen and (max-width: 992px) {
   .carousel{
-    max-height: 800px;
+    min-height: 800px;
   }
   #carouselCorp .carousel-caption{
     left: 4%;
@@ -899,7 +907,7 @@ header .navbar-toggler {
     color: #404040;
   }
   .carousel{
-    max-height: 600px;
+    min-height: 600px;
   }
   #carouselCorp .carousel-caption{
     left: 6%;
