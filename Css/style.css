@@ -228,7 +228,6 @@ header .navbar-toggler {
 }
 
 #navbarCorp .dropdown-menu::before {
-
   content: "";
   position: absolute;
   border-width: 12px 10px;
@@ -784,6 +783,7 @@ header .navbar-toggler {
   position: fixed;
   right: 20px;
   bottom:20px;
+  z-index: 100;
   color: #fff;
   transition: ease-out .3s;
   visibility: hidden;
@@ -844,6 +844,7 @@ header .navbar-toggler {
   }
   #navbarCorp .nav-item .nav-link{
     text-align: center;
+    background-color: var(--bg-dark); 
   }
   .nav-fixed #navbarCorp .nav-item .nav-link{
     background-color:  var(--bg-color);
@@ -889,17 +890,9 @@ header .navbar-toggler {
   #navbarCorp .dropdown-menu::before{
     display: none;
   }
- 
   #site-header .navbar-nav{
     text-align: center;
     width: 100%;
-  }
-  #navbarCorp .nav-item .nav-link{
-    background-color: var(--bg-dark);  
-  }
-  .nav-fixed #navbarCorp .nav-item .nav-link{
-    background-color:  var(--bg-color);
-    color: #404040;
   }
   .carousel{
     min-height: 600px;
@@ -912,7 +905,6 @@ header .navbar-toggler {
   }
   #carouselCorp .carousel-caption h1 {
     font-size: 35px;
-
   }
   #carouselCorp .carousel-caption p {
     font-size: 16px;
@@ -921,11 +913,6 @@ header .navbar-toggler {
   .btn-bottom{
     z-index: 12;
   }
-  /* closeButton */
-
-
-
-
 }
 
 @media screen and (max-width: 576px) {
@@ -952,7 +939,6 @@ header .navbar-toggler {
   .btn-bottom{
     z-index: 12;
   }
-
 }
 @media screen and (max-width: 240px){
   .btn-bottom{
