@@ -39,11 +39,11 @@ body {
 .container-fluid{
   padding: 0;
 }
-.every .container, .always .container, .about .container, .gallery .container{
+.every .container, .always .container, .about .container, .gallery .container, footer .container{
   max-width: 1230px;
 }
 
-.btn-secondary {
+.btn-secondarys {
   padding: 12px 46px;
   background-color:var(--primary-color);
   border-color: var(--primary-color);
@@ -54,7 +54,7 @@ body {
   cursor: pointer;
   z-index: 10;
 }
-.btn-secondary:hover{
+.btn-secondarys:hover{
   color: var(--bg-color);
   background-color: #008030;
   border-color: #00732c;
@@ -161,7 +161,6 @@ header .navbar .navbar-brand .logo {
 }
 header .navbar-toggler {
   border: none;
-
   background-color: var(--primary-color);
 }
 #site-header .navbar-toggler{
@@ -457,8 +456,11 @@ header .navbar-toggler {
 .every-item1 h4 a:hover{
   color: var(--primary-color);
   transition: all .5s;
-
 }
+.every-left a{
+  transition: ease-out .3s;
+}
+
 /* Always */
 
 .always h3{
@@ -674,6 +676,76 @@ header .navbar-toggler {
   color: #61fded;
   background-color: #0d8abc;
   background-image: linear-gradient(-224deg, #0d8abc, #61fded);
+}
+
+/* Footer */
+footer{
+  background-color: var(--bg-dark);
+}
+.footer__top{
+  border-bottom: 1px solid rgba(231, 231, 231, 0.18);
+}
+.footer__logo a{
+  color: white;
+  text-decoration: none;
+}
+.footer__logo .fa-align-right{
+  color: var(--primary-color);
+  padding-right: 10px;
+}
+.footer__logo .logo{
+  display: block;
+  font-size: 16px;
+  transform: translateX(38px);
+}
+.footerTop__title{
+  color: #97a1a9;
+  font-size: 18px;
+  line-height: 28px;
+}
+.footer__icon i{
+  margin-right: 14px;
+  color: #97a1a9;
+}
+.footer__title{
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.footer__item2{
+  font-size: 18px;
+  line-height: 28px;
+  color: #97a1a9;
+  margin-bottom: 10px;
+}
+.footer__list{
+  list-style: none;
+}
+.footer__list a{
+  color: #7f8a94;
+  text-decoration: none;
+  font-size: 19px;
+}
+.footer__list a:hover, .footer__icon i:hover{
+  color: var(--bg-color);
+  transition: .4s ease-in;
+  cursor: pointer;
+}
+
+.footer__bottom{
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  color: #7f8a94;
+  padding: 26px 0 10px;
+}
+.footer__bottom a{
+  color: var(--primary-color);
 }
 
 /* Light theme */
