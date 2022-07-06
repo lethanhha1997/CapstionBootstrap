@@ -10,5 +10,6 @@ Dev 1 (Thanh Hà): Làm Every + Rps + dark more
 Dev 2 (Duy Anh) : Làm News + Rps + dark more
 Dev 1 (Thanh Hà): Làm Always + Rps + dark more
 Dev 2 (Duy Anh) : Làm Find + Rps + dark more
+Dev 1 (Thanh Hà) : Làm Footer + Rps + dark more
 Dev 1 (Thanh Hà): Làm Back To Top + Rps + dark more
-Dev 2 (Duy Anh) : Làm Footer + Rps + dark more
+
