@@ -39,8 +39,8 @@ body {
 .container-fluid{
   padding: 0;
 }
-.every .container, .always .container, .about .container, .gallery .container, footer .container{
-  max-width: 1230px;
+body .container{
+  max-width: 1200px;
 }
 
 .btn-secondarys {
@@ -133,12 +133,13 @@ body {
 }
 
 header .container {
-  max-width: 1250px;
+  max-width: 1220px;
 }
 
 header .navbar-brand {
-  font-size: 2rem;
+  font-size: 1.9rem;
   color:  var(--bg-color);
+  font-weight: 600;
 }
 
 header .navbar .navbar-brand {
@@ -336,7 +337,7 @@ header .navbar-toggler {
 
 #carouselCorp .carousel-caption h1 {
   line-height: 1.1;
-  font-size: 60px;
+  font-size: 65px;
   margin-bottom: 16px;
   font-weight: 600;
 
