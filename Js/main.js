@@ -4,6 +4,11 @@ document.getElementById("switchButton").onclick = function () {
     document.getElementById("darkBody").classList.toggle("dark");
 };
 
+// switch button close and navbar-toggler-icon
+document.getElementById("close").onclick = function () {
+    document.getElementById("darkBody").classList.toggle("open");
+};
+
 // Header scroll
 $(window).on("scroll", function () {
     var scroll = $(window).scrollTop();
@@ -39,3 +44,11 @@ $(document).ready(function () {
       }
     })
   })
+// Ngăn trượt khi show navbar
+$(function () {
+    $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noScroll');
+    })
+});
+
+
