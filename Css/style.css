@@ -631,6 +631,14 @@ header .navbar-toggler {
   background-image: linear-gradient(-224deg, #d45529, #eece90);
   background-size: cover;
 }
+.success .progress.gradient-2::after,
+.success .progress.gradient-2::before {
+  content: "";
+  position: absolute;
+  right: 20%;
+  top: 90%;
+  border-radius: 50%;
+  transform: translate(50%, -50%); }
 .success .progress .gradient-3 {
   color: #5c51ff;
   background-color: #f646a9;
@@ -652,6 +660,33 @@ header .navbar-toggler {
   border-radius: 50%;
   transform: translate(50%, -50%);
 }
+.success .progress .gradient-2::before, .success .progress .gradient-2::after
+{
+  content: "";
+  position: absolute;
+  right: 5%;
+  top: 90%;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+.success .progress .gradient-3::before, .success .progress .gradient-3::after
+{
+  content: "";
+  position: absolute;
+  right: 40%;
+  top: 90%;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+.success .progress .gradient-4::before, .success .progress .gradient-4::after
+{
+  content: "";
+  position: absolute;
+  right: 15%;
+  top: 90%;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
 .success .progress .gradient-1::before, 
 .success .progress .gradient-2::before, 
 .success .progress .gradient-3::before, 
@@ -663,7 +698,7 @@ header .navbar-toggler {
 }
 .success .progress .gradient-1::after,
 .success .progress .gradient-2::after,
-.success .progress .gradient-3:after,
+.success .progress .gradient-3::after,
 .success .progress .gradient-4::after {
   height: 13px;
   width: 13px;
@@ -827,6 +862,7 @@ header .navbar-toggler {
   position: relative;
   margin-bottom: 1.5em;
 }
+
 /* News - Blog */
 .post-thumbnail img{
   width: 100%;
