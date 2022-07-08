@@ -40,8 +40,12 @@ body {
 .container-fluid{
   padding: 0;
 }
-body .container{
-  max-width: 1200px;
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .btn-secondarys {
@@ -182,7 +186,7 @@ header .navbar-toggler {
 #navbarCorp .nav-item .nav-link {
   color:  var(--bg-color);
   transition: all .5s ease;
-  font-size: 16px;
+  font-size: 15px;
   padding: 14px 0 10px;
   text-transform: uppercase;
   font-weight: 600;
@@ -521,6 +525,10 @@ header .navbar-toggler {
 }
 
 /*Gallery section  */
+
+.gallery,.gallery .gallery__bg{
+  background-color: var(--bg-lightgrey) ;
+}
 .gallery__content a.zoom {
   overflow: hidden;
   position: relative;
@@ -573,6 +581,9 @@ header .navbar-toggler {
 
 .gallery__bg {
   background-color: var(--bg-color);
+}
+.company__logo{
+  border-top: 1px solid rgba(213, 206, 206, 0.18);
 }
 
 /* Success */
@@ -1040,7 +1051,6 @@ footer{
 #darkBody {
   background-color:  var(--bg-color);
 }
-
 #switchButton {
   font-size: 24px;
   color:  var(--bg-color);
@@ -1111,9 +1121,7 @@ footer{
 .dark .title-p{
   color: var(--titlec2);
 }
-.dark .title-s{
-  color: #7d6f70;
-}
+
 .dark .about-link a{
   color:  var(--bg-color);
 }
@@ -1142,6 +1150,15 @@ footer{
 }
 .dark .feedback{
   background-color: var(--dark-black);
+}
+.dark .news a.blog-desc{
+  color: var(--bg-color);
+}
+.dark .news .card{
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark .news .card-body{
+  border-bottom:1px solid rgba(255, 255, 255, 0.2) ;
 }
 .dark .testimonial__ppl h3{
   color: var(--bg-color);
@@ -1216,6 +1233,11 @@ footer{
 
 }
 @media screen and (max-width: 992px) {
+  .container{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .carousel{
     min-height: 800px;
   }
