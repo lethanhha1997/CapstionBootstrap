@@ -30,7 +30,6 @@ body {
   line-height: 1.5;
   color: #404040;
   font-size: 1rem;
-  overflow-x:hidden;
   padding: 0;
   margin: 0!important;
 }
@@ -113,10 +112,12 @@ body {
   height: 100px;
   display: grid;
   align-items: center;
-  z-index: 10;
+  z-index: 15;
   border-bottom: 1px solid rgba(231, 231, 231, 0.18);
 }
-
+#site-header h1{
+  margin-bottom: 0;
+}
 .nav-fixed {
   padding: 0px;
   background-color:  var(--bg-color);
@@ -179,7 +180,7 @@ header .navbar-toggler {
 }
 
 #navbarCorp .nav-item {
-  margin: 0 10px;
+ padding: 0 12px;
 }
 
 #navbarCorp .nav-link i {
@@ -194,7 +195,7 @@ header .navbar-toggler {
   padding: 14px 0 10px;
   text-transform: uppercase;
   font-weight: 600;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 #navbarCorp .active .nav-link,#navbarCorp .nav-item .nav-link:hover {
@@ -222,6 +223,7 @@ header .navbar-toggler {
   padding-right: 26px;
   color:  var(--bg-color);
 }
+
 
 #navbarCorp .dropdown-menu {
   width: 180px;
@@ -883,6 +885,7 @@ header .navbar-toggler {
 /* News - Blog */
 .post-thumbnail img{
   width: 100%;
+  height: 242px;
   min-height: 100%;
   object-fit: cover;
   object-position: center;
@@ -892,6 +895,7 @@ header .navbar-toggler {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .news .blog a.blog-desc{
   display: block;
   font-size: 20px;
@@ -985,6 +989,12 @@ header .navbar-toggler {
   padding: 0 15px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+.find .bottom-info .btn{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-weight: 600;
+
 }
 
 /* Footer */
@@ -1350,7 +1360,11 @@ footer{
   }
   #navbarCorp .nav-item .nav-link{
     background-color: var(--bg-dark);
+    opacity: 1;
+    z-index: 100;
   }
+
+
   .carousel{
     min-height: 600px;
     font-size: 10px;
@@ -1359,6 +1373,9 @@ footer{
     top: 30%;
     left: 3%;
     padding: 0 30px;
+  }
+  .footer__title{
+    margin-top: 25px;
   }
   .btn-bottom{
     z-index: 12;
