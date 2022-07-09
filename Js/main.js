@@ -26,7 +26,7 @@ $(document).ready(function () {
       loop: true,
       margin: 20,
       nav: false,
-      responsiveClass: true,
+      // responsiveClass: false,
       responsive: {
         0: {
           items: 1,

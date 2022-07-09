@@ -66,6 +66,7 @@
 .owl-two.owl-theme .owl-dots .owl-dot:hover span{
     transform: scale(1.5);
     background: #213364;
+    opacity: 1;
 }
 .owl-two.owl-theme .owl-dots .owl-dot.active span{
     background: #213364;
