@@ -44,6 +44,8 @@ $(document).ready(function () {
       }
     })
   })
+
+  
 // Ngăn trượt khi show navbar
 $(function () {
     $('.navbar-toggler').click(function () {
