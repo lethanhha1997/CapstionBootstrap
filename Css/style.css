@@ -185,7 +185,7 @@ header .navbar-toggler {
 
 #navbarCorp .nav-link i {
   font-size: 12px;
-  transform: translateY(-3px);
+
 }
 
 #navbarCorp .nav-item .nav-link {
@@ -228,7 +228,7 @@ header .navbar-toggler {
 #navbarCorp .dropdown-menu {
   width: 180px;
   border-radius: var(--border-radius);
-  transform: translateX(-60px);
+  transform: translateX(-50px);
   position: absolute;
 }
 
