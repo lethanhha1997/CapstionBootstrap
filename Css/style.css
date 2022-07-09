@@ -13,6 +13,7 @@
   --border-radius-full: 35px;
   --border-color: transparent;
   --border-color-light: #eee;
+  --titlec2: #c2c2c2;
   --nav-color: #292922;
   --dropdown-color: #fff;
   --iframe-filter: grayscale(0%);
@@ -39,8 +40,12 @@ body {
 .container-fluid{
   padding: 0;
 }
-body .container{
-  max-width: 1200px;
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .btn-secondarys {
@@ -181,7 +186,7 @@ header .navbar-toggler {
 #navbarCorp .nav-item .nav-link {
   color:  var(--bg-color);
   transition: all .5s ease;
-  font-size: 16px;
+  font-size: 15px;
   padding: 14px 0 10px;
   text-transform: uppercase;
   font-weight: 600;
@@ -520,6 +525,10 @@ header .navbar-toggler {
 }
 
 /*Gallery section  */
+
+.gallery,.gallery .gallery__bg{
+  background-color: var(--bg-lightgrey) ;
+}
 .gallery__content a.zoom {
   overflow: hidden;
   position: relative;
@@ -573,6 +582,9 @@ header .navbar-toggler {
 .gallery__bg {
   background-color: var(--bg-color);
 }
+.company__logo{
+  border-top: 1px solid rgba(213, 206, 206, 0.18);
+}
 
 /* Success */
 .progress__info h6 {
@@ -594,6 +606,9 @@ header .navbar-toggler {
   font-size: 0.75rem;
   background-color: var(--bg-grey);
   border-radius: 0.25rem
+}
+.ss-img{
+  border-radius: var(--border-radius);
 }
 .progress__title{
   display: grid;
@@ -617,14 +632,16 @@ header .navbar-toggler {
   background-image: linear-gradient(-224deg, #0d8abc, #61fded);
   background-size: cover;
 }
-.success .progress.gradient-1::after,
+/* .success .progress.gradient-1::after,
 .success .progress.gradient-1::before {
   content: "";
   position: absolute;
   right: 20%;
   top: 90%;
   border-radius: 50%;
-  transform: translate(50%, -50%); }
+  transform: translate(50%, -50%); 
+} */
+
 .success .progress .gradient-2 {
   color: #eece90;
   background-color: #d45529;
@@ -639,6 +656,7 @@ header .navbar-toggler {
   top: 90%;
   border-radius: 50%;
   transform: translate(50%, -50%); }
+
 .success .progress .gradient-3 {
   color: #5c51ff;
   background-color: #f646a9;
@@ -754,9 +772,19 @@ header .navbar-toggler {
   visibility: visible;
   opacity: 1;
 }
-
+.gallery__content a:hover img {
+  overflow: hidden;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out; }
 .gallery__bg {
   background-color: var(--bg-color);
+}
+.gallery__content span.hover-content .title{
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
 }
 .lb-data .lb-number{
   color: var(--primary-color);
@@ -805,13 +833,26 @@ header .navbar-toggler {
   background-color: #00a63f;
   transition: width .6s ease;
 }
-
-/* #a123 {
-  color: #61fded;
-  background-color: #0d8abc;
-  background-image: linear-gradient(-224deg, #0d8abc, #61fded);
-} */
-
+.success .info1 h6.progress__title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 80%;
+}
+.success .info2 h6.progress__title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 95%;
+}
+.success .info3 h6.progress__title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 60%;
+}
+.success .info4 h6.progress__title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 85%;
+}
 /* Testimonial */
 .feedback{
   background: var(--bg-lightgrey);
@@ -842,10 +883,11 @@ header .navbar-toggler {
   font-weight: 600;
   font-size: 20px;
 }
-.feedback .testimonial__des p{
+.feedback .testimonial__des .testimonial__ppl p{
   font-style: normal;
   margin-bottom: 0;
   opacity: 0.8;
+  text-align: left;
 }
 .feedback .testimonial{
   display: block;
@@ -855,12 +897,15 @@ header .navbar-toggler {
   max-width: 900px;
   margin: auto;
 }
-.feedback .testimonial P{
-  font-size: 16px;
+.feedback .testimonial p{
+  font-size: 19px;
   font-weight: 400;
   line-height: 26px;
   position: relative;
   margin-bottom: 1.5em;
+  color: var(--titlec2);
+  text-align: center;
+  opacity: .8;
 }
 
 /* News - Blog */
@@ -882,6 +927,9 @@ header .navbar-toggler {
   font-weight: 600;
   color: var(--heading-color);
   margin-top: 10px;
+}
+.news .blog a{
+  overflow: hidden;
 }
 .news .blog p a {
   font-weight: 400;
@@ -914,6 +962,16 @@ header .navbar-toggler {
   margin-right: -15px;
   margin-left: -15px;
 }
+.news .card:hover img{
+  overflow: hidden;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+.news .card:hover a.blog-desc{
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all .7s;
+}
 /* Find - Subscribe */
 .find{
   background-image: url(../Img/map.png);
@@ -921,6 +979,17 @@ header .navbar-toggler {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.find .bottom-info h3{
+  color: white;
+}
+.find .bottom-info p{
+  color: #eee;
+  opacity: 0.8;
+}
+.find .bottom-info{
+  max-width: 700px;
+  margin: auto;
 }
 .find form{
   margin-top: 25px;
@@ -934,6 +1003,8 @@ header .navbar-toggler {
   color: #fff;
   background-color: #00a63f;
   border-color: #00a63f;
+  font-size: 16px;
+  font-weight: 600;
 }
 .find button.btn{
   border-top-left-radius: 0;
@@ -963,6 +1034,11 @@ header .navbar-toggler {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+.find .bottom-info button:hover{
+  background-color: #008030;
+  border-color: #00732c;
+}
+
 
 /* Footer */
 footer{
@@ -1038,7 +1114,6 @@ footer{
 #darkBody {
   background-color:  var(--bg-color);
 }
-
 #switchButton {
   font-size: 24px;
   color:  var(--bg-color);
@@ -1106,6 +1181,10 @@ footer{
 .dark .title-b{
   color:  var(--bg-color);
 }
+.dark .title-p{
+  color: var(--titlec2);
+}
+
 .dark .about-link a{
   color:  var(--bg-color);
 }
@@ -1123,10 +1202,36 @@ footer{
   color:  var(--bg-color);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+.dark .gallery{
+  background-color: var(--dark-black);
+}
+.dark .gallery__bg{
+  background-color: var(--dark-black);
+}
+.dark .progress__title{
+  color: var(--bg-color);
+}
+.dark .feedback{
+  background-color: var(--dark-black);
+}
+.dark .news a.blog-desc{
+  color: var(--bg-color);
+}
+.dark .news .card{
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark .news .card-body{
+  border-bottom:1px solid rgba(255, 255, 255, 0.2) ;
+}
+.dark .testimonial__ppl h3{
+  color: var(--bg-color);
+}
 .dark .btn-noColor{
   color:  var(--bg-color);
 }
-
+.dark .success .progress{
+  background-color:  var(--dark-black);
+}
 
 /* Back To Top */
 .backToTop {
@@ -1193,6 +1298,11 @@ footer{
 
 }
 @media screen and (max-width: 992px) {
+  .container{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .carousel{
     min-height: 800px;
   }
